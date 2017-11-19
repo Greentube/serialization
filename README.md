@@ -1,4 +1,4 @@
-# Greentube.Serialization
+# Greentube.Serialization [![Build Status](https://travis-ci.org/Greentube/serialization.svg?branch=master)](https://travis-ci.org/Greentube/serialization) [![Build status](https://ci.appveyor.com/api/projects/status/af080b32xjehiuoy/branch/master?svg=true)](https://ci.appveyor.com/project/Greentube/serialization) [![codecov](https://codecov.io/gh/Greentube/serialization/branch/master/graph/badge.svg)](https://codecov.io/gh/Greentube/serialization)
 
 A serialization library which works as a **common interface for serialization**.
 
