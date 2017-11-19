@@ -2,6 +2,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
     <PackageVersion>0.0.0</PackageVersion>
+    <Authors>Bruno Garcia</Authors>
+    <Owners>Bruno Garcia; Greentube</Owners>
+    <Description>A Protocol Buffers implementation of ISerializer provided by Greentube.Serialization</Description>
+    <PackageProjectUrl>https://github.com/Greentube/serialization</PackageProjectUrl>
+    <PackageTags>protobuf-net;protocol-buffers;serialization;common-serialization;ISerializer</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Coverage|AnyCPU'">
     <DebugType>full</DebugType>
