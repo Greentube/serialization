@@ -2,6 +2,9 @@
 
 namespace Greentube.Serialization
 {
+    /// <summary>
+    /// Extension method to <see cref="ISerializer"/>
+    /// </summary>
     public static class SerializerExtensions
     {
         /// <summary>

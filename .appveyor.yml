@@ -24,4 +24,4 @@ dotnet_csproj:
   package_version: '{version}'
 artifacts:
 - path: '**\*.nupkg'
-  name: messaging-nuget-packages
+  name: serialization-nuget-packages
