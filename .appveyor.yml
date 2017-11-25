@@ -2,8 +2,8 @@ configuration: Release
 version: '1.0.0-alpha-{build}'
 init:
   - git config --global core.autocrlf true
+  # If there's a tag, use that as the version.
   - ps: >-
-      # If there's a tag, use that as the version.
       if($env:APPVEYOR_REPO_TAG -eq "true"){Update-AppveyorBuild -Version "$env:APPVEYOR_REPO_TAG_NAME"}
 # Will build dependencies in release (optimize and portable pdbs) mode:
 build_script:
