@@ -8,6 +8,10 @@ namespace Greentube.Serialization.Json
     {
         private readonly JsonOptions _options;
 
+        /// <summary>
+        /// Create a new instance of JsonSerializer
+        /// </summary>
+        /// <param name="options"></param>
         public JsonSerializer(JsonOptions options)
         {
             _options = options ?? throw new ArgumentNullException(nameof(options));

@@ -8,6 +8,10 @@ namespace Greentube.Serialization.ProtoBuf
     {
         private readonly ProtoBufOptions _options;
 
+        /// <summary>
+        /// Creates a new instance of ProtoBufSerializer
+        /// </summary>
+        /// <param name="options"></param>
         public ProtoBufSerializer(ProtoBufOptions options)
         {
             _options = options ?? throw new ArgumentNullException(nameof(options));

@@ -9,6 +9,9 @@ namespace Greentube.Serialization.DependencyInjection
     /// </summary>
     public class SerializationBuilder
     {
+        /// <summary>
+        /// ServiceCollection
+        /// </summary>
         public IServiceCollection Services { get; }
 
         internal SerializationBuilder(IServiceCollection services)
@@ -17,7 +20,7 @@ namespace Greentube.Serialization.DependencyInjection
         }
 
         /// <summary>
-        /// Adds the serializer of type <typeparam name="TSerializer"></typeparam> 
+        /// Adds the serializer of type TSerializer
         /// as the implemenatation of <see cref="ISerializer"/>
         /// </summary>
         /// <typeparam name="TSerializer">The implementation of <see cref="ISerializer"/></typeparam>
@@ -29,7 +32,7 @@ namespace Greentube.Serialization.DependencyInjection
         }
 
         /// <summary>
-        /// Adds the serializer of type <typeparam name="TSerializer"></typeparam> 
+        /// Adds the serializer of type TSerializer
         /// as the implemenatation of <see cref="ISerializer"/>
         /// </summary>
         /// <typeparam name="TSerializer">The implementation of <see cref="ISerializer"/></typeparam>
