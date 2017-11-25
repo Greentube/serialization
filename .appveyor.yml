@@ -33,7 +33,7 @@ deploy:
   release: $(appveyor_build_version)
   provider: GitHub
   auth_token:
-    secure: Mt9wdODnWpZHwq/4E9w7VRU2PmTDREcc4dron+bhCQE8rQ+cL5orxcoRs6v+z2II
+    secure: DsKyNX5x7EJOCaRUpZu17qwOfpd/NWaZzmQd0aE62nBAGkqI3nASvvHfvoQTjL8y
   artifact: /.*\.nupkg/
   draft: true
   on:
