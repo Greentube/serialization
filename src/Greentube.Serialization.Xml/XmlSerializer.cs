@@ -12,6 +12,10 @@ namespace Greentube.Serialization.Xml
     {
         private readonly XmlOptions _options;
 
+        /// <summary>
+        /// Creates a new instance of XmlSerializer
+        /// </summary>
+        /// <param name="options"></param>
         public XmlSerializer(XmlOptions options)
         {
             _options = options ?? throw new ArgumentNullException(nameof(options));

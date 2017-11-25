@@ -1,6 +1,10 @@
 configuration: Release
+version: '1.0.0-alpha-{build}'
 init:
   - git config --global core.autocrlf true
+  # If there's a tag, use that as the version.
+  - ps: >-
+      if($env:APPVEYOR_REPO_TAG -eq "true"){Update-AppveyorBuild -Version "$env:APPVEYOR_REPO_TAG_NAME"}
 # Will build dependencies in release (optimize and portable pdbs) mode:
 build_script:
   - cmd: for /f %%a in ('dir /b test') do dotnet test -c Release test/%%a/%%a.csproj
@@ -15,7 +19,6 @@ environment:
     DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
     DOTNET_CLI_TELEMETRY_OPTOUT: 1
 test: off
-deploy: off
 os: Visual Studio 2017
 dotnet_csproj:
   patch: true
@@ -25,3 +28,13 @@ dotnet_csproj:
 artifacts:
 - path: '**\*.nupkg'
   name: serialization-nuget-packages
+# builds on tags will publish all nupkgs to GitHub as a Draft release
+deploy:
+  release: $(appveyor_build_version)
+  provider: GitHub
+  auth_token:
+    secure: DsKyNX5x7EJOCaRUpZu17qwOfpd/NWaZzmQd0aE62nBAGkqI3nASvvHfvoQTjL8y
+  artifact: /.*\.nupkg/
+  draft: true
+  on:
+    appveyor_repo_tag: true

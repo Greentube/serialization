@@ -80,6 +80,6 @@ builder.AddXml(p => p.Factory = type => new XmlSerializer(type, new XmlRootAttri
 #### Highlights
 
 * Simple abstraction
-* Multiple serialization types supported
+* Multiple serialization formats supported
 * Pay for play: no unwanted dependencies
 * DI packages to consume with single line of code
