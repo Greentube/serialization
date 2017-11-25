@@ -1,10 +1,10 @@
 configuration: Release
+version: '1.0.0-alpha-{build}'
 init:
   - git config --global core.autocrlf true
   - ps: >-
       # If there's a tag, use that as the version.
       if($env:APPVEYOR_REPO_TAG -eq "true"){Update-AppveyorBuild -Version "$env:APPVEYOR_REPO_TAG_NAME"}
-version: '1.0.0-alpha-{build}'
 # Will build dependencies in release (optimize and portable pdbs) mode:
 build_script:
   - cmd: for /f %%a in ('dir /b test') do dotnet test -c Release test/%%a/%%a.csproj
