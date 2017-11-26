@@ -1,0 +1,26 @@
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Greentube.Serialization.All</id>
+    <version>$version$</version>
+    <authors>Bruno Garcia</authors>
+    <owners>Bruno Garcia</owners>
+    <summary>Metapackage which includes all Greentube Serialization packages.</summary>
+    <projectUrl>https://github.com/Greentube/serialization</projectUrl>
+    <description>Metapackage which includes all Greentube Serialization packages.</description>
+    <tags>serialization;common-serialization;ISerializer</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Greentube.Serialization" version="$version$" />
+        <dependency id="Greentube.Serialization.Json" version="$version$" />
+        <dependency id="Greentube.Serialization.Xml" version="$version$" />
+        <dependency id="Greentube.Serialization.ProtoBuf" version="$version$" />
+        <dependency id="Greentube.Serialization.MessagePack" version="$version$" />
+        <dependency id="Greentube.Serialization.DependencyInjection" version="$version$" />
+        <dependency id="Greentube.Serialization.DependencyInjection.Json" version="$version$" />
+        <dependency id="Greentube.Serialization.DependencyInjection.Xml" version="$version$" />
+        <dependency id="Greentube.Serialization.DependencyInjection.ProtoBuf" version="$version$" />
+        <dependency id="Greentube.Serialization.DependencyInjection.MessagePack" version="$version$" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
