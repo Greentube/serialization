@@ -1,3 +1,16 @@
-# Serialization.All metapackage
+# Serialization.All metapackage [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.All.svg)](https://www.nuget.org/packages/Greentube.Serialization.All/)
 
 A metapackage to include all abstractions, implementations and DI extensions.
+
+It does it so by depending on all of the following packages:
+
+* [Greentube.Serialization](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.svg)](https://www.nuget.org/packages/Greentube.Serialization/)
+* [Greentube.Serialization.Json](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.Json) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.Json.svg)](https://www.nuget.org/packages/Greentube.Serialization.Json/)
+* [Greentube.Serialization.Xml](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.Xml) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.Xml.svg)](https://www.nuget.org/packages/Greentube.Serialization.Xml/)
+* [Greentube.Serialization.ProtoBuf](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.ProtoBuf) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.ProtoBuf.svg)](https://www.nuget.org/packages/Greentube.Serialization.ProtoBuf/)
+* [Greentube.Serialization.MessagePack](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.MessagePack) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.MessagePack.svg)](https://www.nuget.org/packages/Greentube.Serialization.MessagePack/)
+* [Greentube.Serialization.DependencyInjection](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.DependencyInjection) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.DependencyInjection.svg)](https://www.nuget.org/packages/Greentube.Serialization.DependencyInjection/)
+* [Greentube.Serialization.DependencyInjection.Json](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.DependencyInjection.Json) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.DependencyInjection.Json.svg)](https://www.nuget.org/packages/Greentube.Serialization.DependencyInjection.Json/)
+* [Greentube.Serialization.DependencyInjection.Xml](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.DependencyInjection.Xml) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.DependencyInjection.Xml.svg)](https://www.nuget.org/packages/Greentube.Serialization.DependencyInjection.Xml/)
+* [Greentube.Serialization.DependencyInjection.ProtoBuf](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.DependencyInjection.ProtoBuf) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.DependencyInjection.ProtoBuf.svg)](https://www.nuget.org/packages/Greentube.Serialization.DependencyInjection.ProtoBuf/)
+* [Greentube.Serialization.DependencyInjection.MessagePack](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.DependencyInjection.MessagePack) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.DependencyInjection.MessagePack.svg)](https://www.nuget.org/packages/Greentube.Serialization.DependencyInjection.MessagePack/)

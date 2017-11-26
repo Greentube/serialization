@@ -4,6 +4,9 @@ A serialization library which works as a **common interface for serialization**.
 
 It includes multiple implementations available for use.
 
+Each project under `src` contains its own documentation and a link to its NuGet package.
+One of such packages is [Greentube.Serialization.All](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.All) which is a metapackage that allows bringing all dependencies with one reference: [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.All.svg)](https://www.nuget.org/packages/Greentube.Serialization.All/)
+
 This library was created mainly to support [Greentube.Messaging](https://github.com/Greentube/messaging).
 
 Although optional, it provides one-line configuration for applications using [Microsoft.Extensions.DependencyInjection](https://github.com/aspnet/DependencyInjection).
@@ -53,7 +56,7 @@ Custom RuntimeTypeModel
 ```csharp
 var model = RuntimeTypeModel.Create();
 model.Add(typeof(SomeMessage), false).Add(1, nameof(SomeMessage.Body));
-builder.AddProtoBuf(o => o.RuntimeTypeModel = runtimeTypeModel);
+builder.AddProtoBuf(o => o.RuntimeTypeModel = model);
 ```
 
 ##### JSON
