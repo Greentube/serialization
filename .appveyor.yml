@@ -1,4 +1,3 @@
-configuration: Release
 version: '1.0.0-alpha-{build}'
 init:
   - git config --global core.autocrlf true
@@ -9,8 +8,10 @@ init:
 build_script:
   - cmd: for /f %%a in ('dir /b test') do dotnet test -c Release test/%%a/%%a.csproj
 after_build:
-# packing the current Release build of all projects under src/
-  - cmd: for /f %%a in ('dir /b src') do dotnet pack --no-build -c Release src/%%a/%%a.csproj
+# packing the current Release build of all projects under src/ except metapackage
+  - cmd: for /f %%a in ('dir /b src ^| find /v "Greentube.Serialization.All"') do dotnet pack --no-build -c Release src/%%a/%%a.csproj
+# pack the metapackage which is based on nuspec
+  - cmd: nuget pack -version %APPVEYOR_BUILD_VERSION% src\Greentube.Serialization.All\Greentube.Serialization.All.nuspec
 # Will build in Coverage mode (full pdbs) and upload coverage to Codecov
 on_success:
   - ps: .\coverage.ps1 -UploadCodecov
