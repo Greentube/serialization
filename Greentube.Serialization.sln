@@ -40,8 +40,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Greentube.Serialization.Mes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Greentube.Serialization.DependencyInjection", "src\Greentube.Serialization.DependencyInjection\Greentube.Serialization.DependencyInjection.csproj", "{631B5B0D-3957-49EB-B0DE-EE6B953D92CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Greentube.Serialization.All", "src\Greentube.Serialization.All\Greentube.Serialization.All.csproj", "{0BBBBDAE-C3C0-4001-B066-7EE486F5BF00}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Greentube.Serialization.DependencyInjection.Json", "src\Greentube.Serialization.DependencyInjection.Json\Greentube.Serialization.DependencyInjection.Json.csproj", "{D0F92B5D-EC9C-4867-BF91-8B73F30E9510}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Greentube.Serialization.DependencyInjection.MessagePack", "src\Greentube.Serialization.DependencyInjection.MessagePack\Greentube.Serialization.DependencyInjection.MessagePack.csproj", "{D68ADE1C-929C-46A6-B0DF-AE4EA5E113AC}"
@@ -110,10 +108,6 @@ Global
 		{631B5B0D-3957-49EB-B0DE-EE6B953D92CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{631B5B0D-3957-49EB-B0DE-EE6B953D92CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{631B5B0D-3957-49EB-B0DE-EE6B953D92CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0BBBBDAE-C3C0-4001-B066-7EE486F5BF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BBBBDAE-C3C0-4001-B066-7EE486F5BF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BBBBDAE-C3C0-4001-B066-7EE486F5BF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BBBBDAE-C3C0-4001-B066-7EE486F5BF00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D0F92B5D-EC9C-4867-BF91-8B73F30E9510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D0F92B5D-EC9C-4867-BF91-8B73F30E9510}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0F92B5D-EC9C-4867-BF91-8B73F30E9510}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -166,7 +160,6 @@ Global
 		{B2B223DB-5BB9-4335-B5D8-81A25CBECA25} = {FD29A32D-EE38-4C99-B172-8F830AEE3E07}
 		{216C7102-EF21-4F19-AB4B-781312C7FA2E} = {454C1E74-61F0-4E54-9ABA-9BD1711B5A83}
 		{631B5B0D-3957-49EB-B0DE-EE6B953D92CF} = {FD29A32D-EE38-4C99-B172-8F830AEE3E07}
-		{0BBBBDAE-C3C0-4001-B066-7EE486F5BF00} = {FD29A32D-EE38-4C99-B172-8F830AEE3E07}
 		{D0F92B5D-EC9C-4867-BF91-8B73F30E9510} = {FD29A32D-EE38-4C99-B172-8F830AEE3E07}
 		{D68ADE1C-929C-46A6-B0DF-AE4EA5E113AC} = {FD29A32D-EE38-4C99-B172-8F830AEE3E07}
 		{EAEF62DE-09F4-4453-A05A-36BB7B0F19FF} = {FD29A32D-EE38-4C99-B172-8F830AEE3E07}

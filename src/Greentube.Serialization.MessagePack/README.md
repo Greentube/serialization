@@ -29,7 +29,7 @@ By leaving the formatter null (default), the underlying package uses the default
 One of such formatters which is fairly useful is the `ContractlessStandardResolver`. It can be defined like:
 
 ```csharp
-var MessagePack = new MessagePackSerializer(
+var messagePack = new MessagePackSerializer(
     new MessagePackOptions
     {
         FormatterResolver = global::MessagePack.Resolvers.ContractlessStandardResolver.Instance

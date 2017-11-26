@@ -1,6 +1,6 @@
 # Greentube.Serialization [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.svg)](https://www.nuget.org/packages/Greentube.Serialization/)
 
-This package hold the base abstraction of serialization. It's a simple contract which any implementation of a serialization format can adhere:
+This package holds the base abstraction of serialization. It's a simple contract which any implementation of a serialization format can adhere:
 
 ```csharp
 interface ISerializer

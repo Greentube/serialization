@@ -1,8 +1,8 @@
-# Serialization.All metapackage [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.All.svg)](https://www.nuget.org/packages/Greentube.Serialization.All/)
+# Greentube.Serialization.All metapackage [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.All.svg)](https://www.nuget.org/packages/Greentube.Serialization.All/)
 
 A metapackage to include all abstractions, implementations and DI extensions.
 
-It does it so by depending on all of the following packages:
+It does so by depending on all of the following packages:
 
 * [Greentube.Serialization](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.svg)](https://www.nuget.org/packages/Greentube.Serialization/)
 * [Greentube.Serialization.Json](https://github.com/Greentube/serialization/tree/master/src/Greentube.Serialization.Json) [![NuGet](https://img.shields.io/nuget/v/Greentube.Serialization.Json.svg)](https://www.nuget.org/packages/Greentube.Serialization.Json/)
