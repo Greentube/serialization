@@ -9,8 +9,16 @@
     <PackageTags>protobuf-net;protocol-buffers;serialization;common-serialization;ISerializer</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+  <!--https://github.com/OpenCover/opencover/issues/595-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Coverage|AnyCPU'">
     <DebugType>full</DebugType>
+  </PropertyGroup>
+  <!--https://github.com/dotnet/project-system/issues/2732-->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="protobuf-net" Version="2.3.2" />
