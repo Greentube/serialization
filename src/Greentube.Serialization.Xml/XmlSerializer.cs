@@ -22,7 +22,7 @@ namespace Greentube.Serialization.Xml
         }
 
         /// <inheritdoc />
-        public byte[] Serialize<T>(T @object)
+        public ReadOnlySpan<byte> Serialize<T>(T @object)
         {
             if (@object == null) throw new ArgumentNullException(nameof(@object));
 
@@ -35,12 +35,13 @@ namespace Greentube.Serialization.Xml
         }
 
         /// <inheritdoc />
-        public object Deserialize(Type type, byte[] bytes)
+        public object Deserialize(Type type, ReadOnlySpan<byte> bytes)
         {
             if (type == null) throw new ArgumentNullException(nameof(type));
-            if (bytes == null) throw new ArgumentNullException(nameof(bytes));
+            if (bytes == default) throw new ArgumentNullException(nameof(bytes));
 
-            using (var stream = new MemoryStream(bytes))
+            // .ToArray() on the Span until the underlying API supports it:
+            using (var stream = new MemoryStream(bytes.ToArray()))
             {
                 var serializer = Create(type);
                 return serializer.Deserialize(stream);

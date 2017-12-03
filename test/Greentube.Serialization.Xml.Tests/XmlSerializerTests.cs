@@ -62,7 +62,7 @@ namespace Greentube.Serialization.Xml.Tests
             var sut = new XmlSerializer(new XmlOptions { DefaultNamespace = @namespace});
             var bytes = sut.Serialize(new object());
 
-            Assert.Contains(@namespace, Encoding.UTF8.GetString(bytes));
+            Assert.Contains(@namespace, Encoding.UTF8.GetString(bytes.ToArray()));
         }
 
         [Fact]

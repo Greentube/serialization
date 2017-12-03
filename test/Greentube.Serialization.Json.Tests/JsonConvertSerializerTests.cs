@@ -13,7 +13,7 @@ namespace Greentube.Serialization.Json.Tests
 
             var actualBytes = sut.Serialize("Não suporta!");
 
-            var actual = Encoding.UTF8.GetString(actualBytes);
+            var actual = Encoding.UTF8.GetString(actualBytes.ToArray());
             Assert.Equal("\"N?o suporta!\"", actual);
         }
 

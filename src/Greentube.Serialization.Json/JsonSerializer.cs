@@ -18,7 +18,7 @@ namespace Greentube.Serialization.Json
         }
 
         /// <inheritdoc />
-        public byte[] Serialize<T>(T @object)
+        public ReadOnlySpan<byte> Serialize<T>(T @object)
         {
             if (@object == null) throw new ArgumentNullException(nameof(@object));
 
@@ -27,13 +27,15 @@ namespace Greentube.Serialization.Json
         }
 
         /// <inheritdoc />
-        public object Deserialize(Type type, byte[] bytes)
+        public object Deserialize(Type type, ReadOnlySpan<byte> bytes)
         {
             if (type == null) throw new ArgumentNullException(nameof(type));
-            if (bytes == null) throw new ArgumentNullException(nameof(bytes));
+            if (bytes == default) throw new ArgumentNullException(nameof(bytes));
 
-            var @string = _options.Encoding.GetString(bytes);
+            // .ToArray() on the Span until the underlying API supports it:
+            var @string = _options.Encoding.GetString(bytes.ToArray());
             return JsonConvert.DeserializeObject(@string, type);
         }
+
     }
 }

@@ -19,7 +19,7 @@ namespace Greentube.Serialization.MessagePack
         }
 
         /// <inheritdoc />
-        public byte[] Serialize<T>(T @object)
+        public ReadOnlySpan<byte> Serialize<T>(T @object)
         {
             if (@object == null) throw new ArgumentNullException(nameof(@object));
 
@@ -29,14 +29,14 @@ namespace Greentube.Serialization.MessagePack
         }
 
         /// <inheritdoc />
-        public object Deserialize(Type type, byte[] bytes)
+        public object Deserialize(Type type, ReadOnlySpan<byte> bytes)
         {
             if (type == null) throw new ArgumentNullException(nameof(type));
-            if (bytes == null) throw new ArgumentNullException(nameof(bytes));
+            if (bytes == default) throw new ArgumentNullException(nameof(bytes));
 
             return _options.UseLz4Compression
-                ? LZ4MessagePackSerializer.NonGeneric.Deserialize(type, bytes, _options.FormatterResolver)
-                : NeueccMessagePackSerializer.NonGeneric.Deserialize(type, bytes, _options.FormatterResolver);
+                ? LZ4MessagePackSerializer.NonGeneric.Deserialize(type, bytes.ToArray(), _options.FormatterResolver)
+                : NeueccMessagePackSerializer.NonGeneric.Deserialize(type, bytes.ToArray(), _options.FormatterResolver);
         }
     }
 }
