@@ -38,7 +38,7 @@ namespace Greentube.Serialization.Xml
         public object Deserialize(Type type, ReadOnlySpan<byte> bytes)
         {
             if (type == null) throw new ArgumentNullException(nameof(type));
-            if (bytes == default) throw new ArgumentNullException(nameof(bytes));
+            if (bytes == default) throw new ArgumentException(nameof(bytes));
 
             // .ToArray() on the Span until the underlying API supports it:
             using (var stream = new MemoryStream(bytes.ToArray()))

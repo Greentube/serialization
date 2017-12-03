@@ -21,7 +21,10 @@ namespace Greentube.Serialization.Json.Tests
         public void Serialize_NullObject_ThrowsNullArgument()
         {
             var sut = new JsonSerializer(new JsonOptions());
-            Assert.Throws<ArgumentNullException>(() => sut.Serialize((object) null));
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                sut.Serialize((object) null); // can't return the Span<T> from the func. it's stack-only
+            });
         }
 
         [Fact]

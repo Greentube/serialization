@@ -32,7 +32,7 @@ namespace Greentube.Serialization.MessagePack
         public object Deserialize(Type type, ReadOnlySpan<byte> bytes)
         {
             if (type == null) throw new ArgumentNullException(nameof(type));
-            if (bytes == default) throw new ArgumentNullException(nameof(bytes));
+            if (bytes == default) throw new ArgumentException(nameof(bytes));
 
             return _options.UseLz4Compression
                 ? LZ4MessagePackSerializer.NonGeneric.Deserialize(type, bytes.ToArray(), _options.FormatterResolver)

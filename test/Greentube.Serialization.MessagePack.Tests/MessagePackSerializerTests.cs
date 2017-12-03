@@ -10,7 +10,10 @@ namespace Greentube.Serialization.MessagePack.Tests
         public void Serialize_NullObject_ThrowsNullArgument()
         {
             var sut = new MessagePackSerializer(new MessagePackOptions());
-            Assert.Throws<ArgumentNullException>(() => sut.Serialize((object) null));
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                sut.Serialize((object) null);
+            });
         }
 
         [Fact]

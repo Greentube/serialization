@@ -10,7 +10,10 @@ namespace Greentube.Serialization.ProtoBuf.Tests
         public void Serialize_NullObject_ThrowsNullArgument()
         {
             var sut = new ProtoBufSerializer(new ProtoBufOptions());
-            Assert.Throws<ArgumentNullException>(() => sut.Serialize((object) null));
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                sut.Serialize((object) null);
+            });
         }
 
         [Fact]

@@ -14,7 +14,7 @@ namespace Greentube.Serialization
         /// <param name="bytes">The data to deserialize</param>
         /// <typeparam name="T">The type to instantiate</typeparam>
         /// <returns>The deserialized object</returns>
-        public static T Deserialize<T>(this ISerializer serializer, byte[] bytes)
+        public static T Deserialize<T>(this ISerializer serializer, ReadOnlySpan<byte> bytes)
         {
             if (serializer == null) throw new ArgumentNullException(nameof(serializer));
             return (T)serializer.Deserialize(typeof(T), bytes);

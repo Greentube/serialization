@@ -13,7 +13,11 @@ namespace Greentube.Serialization.Xml.Tests
             {
                 Factory = _ => throw new DivideByZeroException()
             });
-            Assert.Throws<DivideByZeroException>(() => sut.Serialize(new object()));
+
+            Assert.Throws<DivideByZeroException>(() =>
+            {
+                sut.Serialize(new object());
+            });
         }
 
         [Fact]
@@ -23,6 +27,7 @@ namespace Greentube.Serialization.Xml.Tests
             {
                 Factory = _ => throw new DivideByZeroException()
             });
+
             Assert.Throws<DivideByZeroException>(() => sut.Deserialize(GetType(), new byte[0]));
         }
 
@@ -30,7 +35,10 @@ namespace Greentube.Serialization.Xml.Tests
         public void Serialize_NullObject_ThrowsNullArgument()
         {
             var sut = new XmlSerializer(new XmlOptions());
-            Assert.Throws<ArgumentNullException>(() => sut.Serialize((object) null));
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                sut.Serialize((object) null);
+            });
         }
 
         [Fact]
