@@ -6,6 +6,7 @@
     <owners>Bruno Garcia</owners>
     <summary>Metapackage which includes all Greentube Serialization packages.</summary>
     <projectUrl>https://github.com/Greentube/serialization</projectUrl>
+    <iconUrl>https://secure.gravatar.com/avatar/17bd1cac322148576079337ecd153f25</iconUrl>
     <description>Metapackage which includes all Greentube Serialization packages.</description>
     <tags>serialization;common-serialization;ISerializer</tags>
     <dependencies>
