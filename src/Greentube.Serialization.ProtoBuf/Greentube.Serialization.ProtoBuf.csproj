@@ -6,6 +6,7 @@
     <Owners>Bruno Garcia; Greentube</Owners>
     <Description>A Protocol Buffers implementation of ISerializer provided by Greentube.Serialization</Description>
     <PackageProjectUrl>https://github.com/Greentube/serialization</PackageProjectUrl>
+    <PackageIconUrl>https://secure.gravatar.com/avatar/17bd1cac322148576079337ecd153f25</PackageIconUrl>
     <PackageTags>protobuf-net;protocol-buffers;serialization;common-serialization;ISerializer</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>

@@ -6,6 +6,7 @@
     <Owners>Bruno Garcia; Greentube</Owners>
     <Description>Integration of Greentube.Serialization with Microsoft.DependencyInjection.</Description>
     <PackageProjectUrl>https://github.com/Greentube/serialization</PackageProjectUrl>
+    <PackageIconUrl>https://secure.gravatar.com/avatar/17bd1cac322148576079337ecd153f25</PackageIconUrl>
     <PackageTags>aspnetcore;dependency-injection;serialization;common-serialization;ISerializer</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
